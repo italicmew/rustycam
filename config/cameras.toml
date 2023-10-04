@@ -1,0 +1,13 @@
+[[camera]]
+name = "camera-1"
+ip = "192.168.0.110"
+port = 80
+user = "admin"
+password = "L24515F6"
+
+[[camera]]
+name = "camera-2"
+ip = "42.69.42.0"
+port = 80
+user = "test"
+password = "test"
