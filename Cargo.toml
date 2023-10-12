@@ -6,7 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-onvif = { git = "https://github.com/lumeohq/onvif-rs" }
 toml = "0.8.1"
 serde = "1.0.136"
 serde_derive = "1.0.136"
@@ -17,3 +16,6 @@ serde-xml-rs = "0.6.0"
 lazy_static = "1.0"
 socket2 = { version = "0.3.4", features = ["reuseport"] }
 xmltree = "0.10.3"
+futures-util = "0.3.28"
+schema = { version = "0.1.0", path = "../onvif-rs/schema", default-features = false, features = ["analytics", "devicemgmt", "event", "media", "ptz"] }
+onvif = {  version = "0.1.0", path = "../onvif-rs/onvif" }

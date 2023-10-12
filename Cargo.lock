@@ -20,7 +20,6 @@ checksum = "f26201604c87b1e01bd3d98f8d5d9a8fcbb815e8cedb41ffccbeb4bf593a35fe"
 [[package]]
 name = "analytics"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -79,7 +78,6 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 [[package]]
 name = "b_2"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "t_1",
  "validate",
@@ -211,7 +209,6 @@ dependencies = [
 [[package]]
 name = "common"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -265,7 +262,6 @@ dependencies = [
 [[package]]
 name = "devicemgmt"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -340,7 +336,6 @@ dependencies = [
 [[package]]
 name = "event"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "b_2",
  "t_1",
@@ -796,7 +791,6 @@ dependencies = [
 [[package]]
 name = "media"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -948,7 +942,6 @@ checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 [[package]]
 name = "onvif"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "async-recursion",
  "async-trait",
@@ -978,7 +971,6 @@ dependencies = [
 [[package]]
 name = "onvif-xsd"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "b_2",
  "common",
@@ -1041,10 +1033,12 @@ dependencies = [
 name = "pamera"
 version = "0.1.0"
 dependencies = [
+ "futures-util",
  "lazy_static",
  "onvif",
  "reqwest",
  "retina",
+ "schema",
  "serde",
  "serde-xml-rs",
  "serde_derive",
@@ -1145,7 +1139,6 @@ dependencies = [
 [[package]]
 name = "ptz"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -1337,7 +1330,6 @@ dependencies = [
 [[package]]
 name = "schema"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "analytics",
  "b_2",
@@ -1523,7 +1515,6 @@ checksum = "942b4a808e05215192e39f4ab80813e599068285906cc91aa64f923db842bd5a"
 [[package]]
 name = "soap_envelope"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -1589,7 +1580,6 @@ dependencies = [
 [[package]]
 name = "t_1"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -1798,7 +1788,6 @@ dependencies = [
 [[package]]
 name = "transport"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "async-trait",
  "thiserror",
@@ -1820,7 +1809,6 @@ checksum = "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825"
 [[package]]
 name = "types"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -1880,7 +1868,6 @@ dependencies = [
 [[package]]
 name = "validate"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 
 [[package]]
 name = "vcpkg"
@@ -2110,7 +2097,6 @@ dependencies = [
 [[package]]
 name = "ws_addr"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -2123,7 +2109,6 @@ dependencies = [
 [[package]]
 name = "ws_discovery"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "percent-encoding",
  "url",
@@ -2141,7 +2126,6 @@ checksum = "b07db065a5cf61a7e4ba64f29e67db906fb1787316516c4e6e5ff0fea1efcd8a"
 [[package]]
 name = "xml_xsd"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "xml-rs",
  "yaserde",
@@ -2151,7 +2135,6 @@ dependencies = [
 [[package]]
 name = "xmlmime"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
@@ -2173,7 +2156,6 @@ dependencies = [
 [[package]]
 name = "xop"
 version = "0.1.0"
-source = "git+https://github.com/lumeohq/onvif-rs#c41264d16807d3475b4bc1d5e09bf0eac16db30e"
 dependencies = [
  "validate",
  "xml-rs",
