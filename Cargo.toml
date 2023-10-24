@@ -3,8 +3,6 @@ name = "pamera"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 toml = "0.8.1"
 serde = "1.0.136"
@@ -14,12 +12,11 @@ retina = "0.4.5"
 reqwest = "0.11"
 serde-xml-rs = "0.6.0"
 lazy_static = "1.0"
-socket2 = { version = "0.3.4", features = ["reuseport"] }
 xmltree = "0.10.3"
 futures-util = "0.3.28"
 async-trait = "0.1.50"
 log = "0.4"
 env_logger = "0.10.0"
-schema = { version = "0.1.0", path = "../onvif-rs/schema", default-features = false, features = ["analytics", "devicemgmt", "event", "media", "ptz"] }
-onvif = {  version = "0.1.0", path = "../onvif-rs/onvif" }
+schema = { version = "0.1.0", git = "https://github.com/lumeohq/onvif-rs.git", default-features = false, features = ["analytics", "devicemgmt", "event", "media", "ptz"] }
+onvif = {  version = "0.1.0", git = "https://github.com/lumeohq/onvif-rs.git" }
 webrtc = "0.9.0"

@@ -64,6 +64,7 @@ dependencies = [
 [[package]]
 name = "analytics"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -173,6 +174,7 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 [[package]]
 name = "b_2"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "t_1",
  "validate",
@@ -371,6 +373,7 @@ dependencies = [
 [[package]]
 name = "common"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -534,6 +537,7 @@ dependencies = [
 [[package]]
 name = "devicemgmt"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -669,6 +673,7 @@ dependencies = [
 [[package]]
 name = "event"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "b_2",
  "t_1",
@@ -1226,6 +1231,7 @@ dependencies = [
 [[package]]
 name = "media"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -1408,6 +1414,7 @@ checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 [[package]]
 name = "onvif"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "async-recursion",
  "async-trait",
@@ -1437,6 +1444,7 @@ dependencies = [
 [[package]]
 name = "onvif-xsd"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "b_2",
  "common",
@@ -1541,7 +1549,6 @@ dependencies = [
  "serde",
  "serde-xml-rs",
  "serde_derive",
- "socket2 0.3.19",
  "tokio",
  "toml",
  "webrtc",
@@ -1701,6 +1708,7 @@ dependencies = [
 [[package]]
 name = "ptz"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "common",
  "onvif-xsd",
@@ -2023,6 +2031,7 @@ dependencies = [
 [[package]]
 name = "schema"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "analytics",
  "b_2",
@@ -2280,6 +2289,7 @@ dependencies = [
 [[package]]
 name = "soap_envelope"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -2287,17 +2297,6 @@ dependencies = [
  "xsd-types",
  "yaserde",
  "yaserde_derive",
-]
-
-[[package]]
-name = "socket2"
-version = "0.3.19"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "122e570113d28d773067fab24266b66753f6ea915758651696b6e35e49f88d6e"
-dependencies = [
- "cfg-if",
- "libc",
- "winapi",
 ]
 
 [[package]]
@@ -2407,6 +2406,7 @@ dependencies = [
 [[package]]
 name = "t_1"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -2653,6 +2653,7 @@ dependencies = [
 [[package]]
 name = "transport"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "async-trait",
  "thiserror",
@@ -2693,6 +2694,7 @@ checksum = "42ff0bf0c66b8238c6f3b578df37d0b7848e55df8577b3f74f92a69acceeb825"
 [[package]]
 name = "types"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -2783,6 +2785,7 @@ dependencies = [
 [[package]]
 name = "validate"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 
 [[package]]
 name = "vcpkg"
@@ -3234,6 +3237,7 @@ dependencies = [
 [[package]]
 name = "ws_addr"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -3246,6 +3250,7 @@ dependencies = [
 [[package]]
 name = "ws_discovery"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "percent-encoding",
  "url",
@@ -3293,6 +3298,7 @@ checksum = "b07db065a5cf61a7e4ba64f29e67db906fb1787316516c4e6e5ff0fea1efcd8a"
 [[package]]
 name = "xml_xsd"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "xml-rs",
  "yaserde",
@@ -3302,6 +3308,7 @@ dependencies = [
 [[package]]
 name = "xmlmime"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
@@ -3323,6 +3330,7 @@ dependencies = [
 [[package]]
 name = "xop"
 version = "0.1.0"
+source = "git+https://github.com/lumeohq/onvif-rs.git#16d0694f920b4e20da81856ac67f0d2180e02395"
 dependencies = [
  "validate",
  "xml-rs",
