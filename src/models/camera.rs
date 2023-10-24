@@ -58,6 +58,16 @@ impl Camera {
         }
     }
 
+    pub fn get_rtsp_credentials(&self) -> Option<retina::client::Credentials> {
+        match (&self.user, &self.password) {
+            (Some(user), Some(pwd)) => Some(retina::client::Credentials {
+                username: user.clone(),
+                password: pwd.clone(),
+            }),
+            _ => None,
+        }
+    }
+
     pub fn get_onvif_url(&self) -> Option<Url> {
         self.urls.first().and_then(|url_str| Url::parse(url_str).ok())
     }

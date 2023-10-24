@@ -1,42 +1,50 @@
 use models::camera::Camera;
-use services::discovery::DiscoveryService; 
+use reqwest::Url;
+use services::{discovery::DiscoveryService, onvif::RTSPUrl};
+
+use crate::services::onvif::OnvifService; 
 
 pub mod services;
 pub mod models;
 
 
-async fn get_hostname(cam: &Camera) {
-    // let creds: Option<Credentials> = Some(Credentials {
-    //     password: cam,
-    //     username: cam.user.clone()
-    // });
-    // let dvmg = ClientBuilder::new(&cam.device.urls[0])
-    //     .credentials(creds.clone())
-    //     .build();
+pub async fn run(rtsp_uri: &RTSPUrl, cam: &mut Camera) {
+    let uri = Url::parse(rtsp_uri.uri.as_str()).ok().unwrap();
 
-    // println!("omg");
-    // let resp = devicemgmt::get_hostname(&dvmg, &Default::default()).await.unwrap();
+    let session = retina::client::Session::describe(
+        uri,
+        retina::client::SessionOptions::default()
+            .creds(cam.get_rtsp_credentials())
+            .user_agent("Retina sdp example".to_owned()),
+    )
+    .await.unwrap();
 
-    // let resp2 = schema::media::get_profiles(&dvmg, &Default::default()).await;
+    println!("SDP:\n{}\n\n", std::str::from_utf8(session.sdp()).unwrap());
 
-    // let profiles = resp2.unwrap().profiles;
-
-    // println!(
-    //     "{}",
-    //     resp.hostname_information
-    //         .name
-    //         .as_deref()
-    //         .unwrap_or("(unset)")
-    // );
+    for (i, stream) in session.streams().iter().enumerate() {
+        println!("stream {i}:\n{stream:#?}\n\n");
+    }
 
 }
 
-
-
 #[tokio::main]
 async fn main() {
+    env_logger::init();
     let mut discover = DiscoveryService::default();
-    let a = discover.discover().await.unwrap();
+    let mut cams = discover.discover().await.unwrap();
+
+    for cam in &mut cams {
+        cam.set_credentials(Some("admin".to_string()), Some("L24515F6".to_string()));
+
+        let mut onv = OnvifService::default();
+        onv.build_services(&cam).await;
+        let urls = onv.get_stream_uris().await;
+
+        for url in urls {
+            run(&url, cam).await;
+        }
+
+    }
 
     println!("Ok!");
 
